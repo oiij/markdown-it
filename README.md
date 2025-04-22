@@ -7,18 +7,24 @@ Features:
 
 # Usage
 
-### 本地包测试
-
-当前目录下执行：
+### 安装
 
 ```bash
-pnpm link --global --dir=./
+pnpm add @oiij/v-charts
 ```
 
-目标目录：
+### 使用
 
-```bash
-pnpm link --global <package name>
+```vue
+<script setup lang="ts">
+import { useMarkdownIt } from '@oiij/markdown-it'
+
+const { domRef, html } = useMarkdownIt('# Hello World')
+</script>
+
+<template>
+  <div ref="domRef" style="width: 100%; height: 100%;" />
+</template>
 ```
 
 ## License
